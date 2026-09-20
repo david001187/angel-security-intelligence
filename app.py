@@ -480,7 +480,7 @@ with col_p2:
 str_lit.markdown("<br>", unsafe_allow_html=True)
 
 # --- SECCIÓN 5: PROTOCOLOS Y RED DE ENLACES OFICIALES ---
-str_lit.subheader("⚡ Protocolos, Patrocinios Diarios y Red de Afiliados Masivos")
+str_lit.subheader("⚡ Protocolos y red")
 str_lit.markdown("<p style='font-size: 0.9rem; color: #94A3B8;'>Acceso directo a herramientas de infraestructura, agregadores, bots de trading y servicios de patrocinio diario integrados con tu cuenta y referidos para ingresos recurrentes.</p>", unsafe_allow_html=True)
 
 col_r1, col_r2 = str_lit.columns(2)
