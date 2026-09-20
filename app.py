@@ -157,7 +157,7 @@ str_lit.markdown("</div>", unsafe_allow_html=True)
 str_lit.markdown("<br>", unsafe_allow_html=True)
 
 # --- SECCIÓN 1: BUSCADOR UNIVERSAL Y AUDITORÍA AVANZADA DE SOLANA (100% REAL EN VIVO & INFORMATIVO) ---
-str_lit.subheader("🔍 Buscador Universal y Auditoría On-Chain (Información y Significado)")
+str_lit.subheader("🔍 Buscador Universal y Auditoría On-Chain")
 str_lit.markdown("<p style='font-size: 0.9rem; color: #94A3B8;'>Inspecciona de forma real cualquier Token, Wallet, Contrato o Firma en la blockchain de Solana. Obtén todos los datos técnicos, su significado exacto y la cartola de movimientos para tu propio análisis.</p>", unsafe_allow_html=True)
 
 target_input = str_lit.text_input("Ingresa Mint de Token, Wallet o Firma de Transacción (TXID):", value="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v")
