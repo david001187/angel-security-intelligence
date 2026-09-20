@@ -16,7 +16,6 @@ str_lit.set_page_config(
 # --- CONFIGURACIÓN DE MONETIZACIÓN GLOBAL Y TESORERÍA ---
 TREASURY_WALLET_ADDRESS = "6bnAU7x3uCFVGk4pTdqv68ibKXik5NTHsxNADtBUY4Qj"
 PAYPAL_ME_LINK = f"https://paypal.me/angelciberseguridad"
-USDT_TRC20_ADDRESS = "TU_DIRECCION_USDT_TRC20_AQUI"
 
 # Enlaces de pasarelas, afiliados y herramientas con tu wallet y referencias integradas
 JUPITER_ROUTER_URL = f"https://jup.ag/swap/SOL-USDC?ref={TREASURY_WALLET_ADDRESS}"
@@ -237,7 +236,7 @@ if str_lit.button("Consultar Información On-Chain con AngeL"):
             except Exception:
                 pass
 
-            # Consulta de mercado real vía Dexscreener (CORREGIDO SYNTAXIS)
+            # Consulta de mercado real vía Dexscreener
             pair_data = None
             try:
                 res = requests.get(f"https://api.dexscreener.com/latest/dex/tokens/{query}", timeout=5)
@@ -420,8 +419,8 @@ with col_s1:
         <div class='content-card'>
             <h4 style='color: #F8FAFC; margin-top:0;'>🛡️ SOC 24/7 (Contrato)</h4>
             <p style='font-size: 0.85rem; color: #94A3B8;'>Monitoreo continuo de red, detección de intrusiones y respuesta a incidentes.</p>
-            <div style='text-decoration: line-through; color: #94A3B8; font-size: 0.9rem;'>$1,499 USD</div>
-            <div class='price-tag'>$999 USD <span style='font-size:0.7rem; color:#38BDF8;'>/ mes (Oferta)</span></div>
+            <div style='text-decoration: line-through; color: #94A3B8; font-size: 0.9rem;'>$1,500 USD</div>
+            <div class='price-tag'>$1000 USD <span style='font-size:0.7rem; color:#38BDF8;'>/ mes (Oferta)</span></div>
     """, unsafe_allow_html=True)
     if str_lit.button("Contratar SOC 24/7"):
         str_lit.success(f"Redirigiendo a pasarela de pago segura. Tesorería: {TREASURY_WALLET_ADDRESS}")
@@ -432,8 +431,8 @@ with col_s2:
         <div class='content-card'>
             <h4 style='color: #F8FAFC; margin-top:0;'>🌐 Auditoría Web</h4>
             <p style='font-size: 0.85rem; color: #94A3B8;'>Pruebas de penetración OWASP Top 10 y análisis de vulnerabilidades.</p>
-            <div style='text-decoration: line-through; color: #94A3B8; font-size: 0.9rem;'>$799 USD</div>
-            <div class='price-tag'>$499 USD <span style='font-size:0.7rem; color:#38BDF8;'>/ único (Oferta)</span></div>
+            <div style='text-decoration: line-through; color: #94A3B8; font-size: 0.9rem;'>$850 USD</div>
+            <div class='price-tag'>$500 USD <span style='font-size:0.7rem; color:#38BDF8;'>/ único (Oferta)</span></div>
     """, unsafe_allow_html=True)
     if str_lit.button("Contratar Auditoría Web"):
         str_lit.success(f"Iniciando solicitud de auditoría web vía enlace oficial.")
@@ -444,8 +443,8 @@ with col_s3:
         <div class='content-card'>
             <h4 style='color: #F8FAFC; margin-top:0;'>📱 Auditoría Android</h4>
             <p style='font-size: 0.85rem; color: #94A3B8;'>Ingeniería inversa, análisis de APK, cifrado y validación de APIs móviles.</p>
-            <div style='text-decoration: line-through; color: #94A3B8; font-size: 0.9rem;'>$950 USD</div>
-            <div class='price-tag'>$650 USD <span style='font-size:0.7rem; color:#38BDF8;'>/ único (Oferta)</span></div>
+            <div style='text-decoration: line-through; color: #94A3B8; font-size: 0.9rem;'>$850 USD</div>
+            <div class='price-tag'>$500 USD <span style='font-size:0.7rem; color:#38BDF8;'>/ único (Oferta)</span></div>
     """, unsafe_allow_html=True)
     if str_lit.button("Contratar Auditoría Android"):
         str_lit.success(f"Preparando entorno de análisis móvil para tu app.")
@@ -453,11 +452,11 @@ with col_s3:
 
 str_lit.markdown("<br>", unsafe_allow_html=True)
 
-# --- SECCIÓN 4: PASARELAS DE PAGO Y MEDIOS MULTIPLES ---
-str_lit.subheader("💳 Medios de Pago Múltiples")
+# --- SECCIÓN 4: PASARELAS DE PAGO Y MEDIOS MULTIPLES (Actualizado a 2 columnas) ---
+str_lit.subheader("💳 Medios de Pago")
 str_lit.markdown("<p style='font-size: 0.9rem; color: #94A3B8;'>Paga tus servicios de ciberseguridad con criptomonedas instantáneas, pasarelas DeFi o PayPal.</p>", unsafe_allow_html=True)
 
-col_p1, col_p2, col_p3 = str_lit.columns(3)
+col_p1, col_p2 = str_lit.columns(2)
 
 with col_p1:
     str_lit.markdown("""
@@ -476,16 +475,6 @@ with col_p2:
     """, unsafe_allow_html=True)
     str_lit.code(TREASURY_WALLET_ADDRESS, language="text")
     str_lit.link_button("Pagar en DEX (Jupiter)", JUPITER_ROUTER_URL)
-    str_lit.markdown("</div>", unsafe_allow_html=True)
-
-with col_p3:
-    str_lit.markdown("""
-        <div class='content-card' style='text-align: center;'>
-            <h4 style='color: #F8FAFC;'>💎 USDT / Redes</h4>
-            <p style='font-size: 0.8rem; color: #94A3B8;'>Criptoactivos globales.</p>
-    """, unsafe_allow_html=True)
-    str_lit.code(USDT_TRC20_ADDRESS, language="text")
-    str_lit.link_button("Pagar vía Raydium", RAYDIUM_ROUTER_URL)
     str_lit.markdown("</div>", unsafe_allow_html=True)
 
 str_lit.markdown("<br>", unsafe_allow_html=True)
