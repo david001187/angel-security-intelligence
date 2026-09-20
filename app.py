@@ -512,7 +512,7 @@ with col_r1:
 
     str_lit.markdown("""
         <div class='content-card'>
-            <h4 style='color: #F8FAFC; margin-top:0;'>🦊 Phantom Wallet (Patrocinio)</h4>
+            <h4 style='color: #F8FAFC; margin-top:0;'>🦊 Phantom Wallet </h4>
             <p style='font-size: 0.85rem; color: #94A3B8;'>Billetera oficial de Solana con comisiones de referido diarias.</p>
     """, unsafe_allow_html=True)
     str_lit.link_button("Instalar Phantom (Ref)", PHANTOM_AFFILIATE_URL)
