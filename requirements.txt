@@ -2,3 +2,9 @@ streamlit
 requests
 Pillow
 qrcode
+pandas
+solana
+solders
+httpx
+fastapi
+uvicorn
