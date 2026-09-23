@@ -1,4 +1,5 @@
 import streamlit as str_lit
+import streamlit.components.v1 as components
 import requests
 import base64
 from io import BytesIO
@@ -417,7 +418,11 @@ col_s1, col_s2, col_s3 = str_lit.columns(3)
 with col_s1:
     str_lit.markdown("""
         <div class='content-card'>
+<<<<<<< Updated upstream
             <h4 style='color: #F8FAFC; margin-top:0;'>🛡️ SOC 24/7 (Contrato)</h4>
+=======
+            <h4 style='color: #F8FAFC; margin-top:0;'>🛡️ SOC 24/7</h4>
+>>>>>>> Stashed changes
             <p style='font-size: 0.85rem; color: #94A3B8;'>Monitoreo continuo de red, detección de intrusiones y respuesta a incidentes.</p>
             <div style='text-decoration: line-through; color: #94A3B8; font-size: 0.9rem;'>$1,500 USD</div>
             <div class='price-tag'>$1000 USD <span style='font-size:0.7rem; color:#38BDF8;'>/ mes (Oferta)</span></div>
@@ -452,7 +457,11 @@ with col_s3:
 
 str_lit.markdown("<br>", unsafe_allow_html=True)
 
+<<<<<<< Updated upstream
 # --- SECCIÓN 4: PASARELAS DE PAGO Y MEDIOS MULTIPLES (Actualizado a 2 columnas) ---
+=======
+# --- SECCIÓN 4: PASARELAS DE PAGO Y MEDIOS MULTIPLES ---
+>>>>>>> Stashed changes
 str_lit.subheader("💳 Medios de Pago")
 str_lit.markdown("<p style='font-size: 0.9rem; color: #94A3B8;'>Paga tus servicios de ciberseguridad con criptomonedas instantáneas, pasarelas DeFi o PayPal.</p>", unsafe_allow_html=True)
 
@@ -567,6 +576,31 @@ with col_r2:
     str_lit.link_button("Abrir Maestro Bot", MAESTRO_BOT_URL)
     str_lit.markdown("</div>", unsafe_allow_html=True)
 
+<<<<<<< Updated upstream
+=======
+str_lit.markdown("<br>", unsafe_allow_html=True)
+
+# --- SECCIÓN DE PATROCINIO / ANUNCIOS (Banner 300x250) ---
+str_lit.markdown("<div class='content-card' style='text-align: center;'>", unsafe_allow_html=True)
+str_lit.subheader("📢 Patrocinadores y Publicidad")
+str_lit.markdown("<p style='font-size: 0.9rem; color: #94A3B8;'>Espacio publicitario integrado para apoyar el mantenimiento de la plataforma.</p>", unsafe_allow_html=True)
+
+ad_code = """
+<script type="text/javascript">
+    atOptions = {
+        'key' : '70e7780bfb94e2a38a943e4da2236203',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+    };
+</script>
+<script type="text/javascript" src="https://www.highrevenueformat.com/70e7780bfb94e2a38a943e4da2236203/invoke.js"></script>
+"""
+components.html(ad_code, height=270, scrolling=False)
+str_lit.markdown("</div>", unsafe_allow_html=True)
+
+>>>>>>> Stashed changes
 str_lit.markdown("<br>", unsafe_allow_html=True)
 
 # --- PIE DE PÁGINA ---
