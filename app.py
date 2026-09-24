@@ -1,12 +1,5 @@
 import streamlit as str_lit
 import streamlit.components.v1 as components
-
-# --- VERIFICACIÓN HILLTOPADS ---
-components.html(
-    '<meta name="aec5ac26b03fad5536e78f4b11eaa4ecdb6b2f5f"'
-    ' content="aec5ac26b03fad5536e78f4b11eaa4ecdb6b2f5f" />',
-    height=0,
-)
 import requests
 import base64
 from io import BytesIO
@@ -455,38 +448,69 @@ with col_r2:
 
 str_lit.markdown("<br>", unsafe_allow_html=True)
 
-# --- SECCIÓN DE PATROCINIOS Y PUBLICIDAD (10 UNIDADES LIMPIAS) ---
+# --- SECCIÓN DE PATROCINIOS Y PUBLICIDAD (EXCLUSIVO ADSTERRA) ---
 str_lit.subheader("📢 Patrocinadores y Publicidad")
 
 ad_units = [
-    ('<script type="text/javascript" src="https://recordssponge.com/a3dewxhcvr?key=1a2d9cb846d27dcb912e40e87f1cd613"></script>', 50),
-    ('<script src="https://recordssponge.com/0f/4e/e9/0f4ee99c511ee5d28bb6af0484d76ae5.js"></script>', 50),
-    ('<script async="async" data-cfasync="false" src="https://recordssponge.com/b8ce7bc9ad670ff706446376eacf6dd9/invoke.js"></script><div id="container-b8ce7bc9ad670ff706446376eacf6dd9"></div>', 100),
-    ('<script src="https://recordssponge.com/de/6e/d9/de6ed91fcd1cb73a5c2197fd70a1f9fa.js"></script>', 50),
-    ("""<script>
-    atOptions = { 'key' : '6974aeff7dfe768c9bb6f1bc4f41b8c2', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
-</script>
-<script src="https://recordssponge.com/6974aeff7dfe768c9bb6f1bc4f41b8c2/invoke.js"></script>""", 80),
-    ("""<script>
-    atOptions = { 'key' : '70e7780bfb94e2a38a943e4da2236203', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
-</script>
-<script src="https://recordssponge.com/70e7780bfb94e2a38a943e4da2236203/invoke.js"></script>""", 270),
-    ("""<script>
-    atOptions = { 'key' : '065915b0fcd8a8e875f0750f253ab93f', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
-</script>
-<script src="https://recordssponge.com/065915b0fcd8a8e875f0750f253ab93f/invoke.js"></script>""", 320),
-    ("""<script>
-    atOptions = { 'key' : '94ee7415d71e74eed371c9428fb40dbf', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };
-</script>
-<script src="https://recordssponge.com/94ee7415d71e74eed371c9428fb40dbf/invoke.js"></script>""", 620),
-    ("""<script>
-    atOptions = { 'key' : 'd4e8fdc34e066ff48c36683c692dd432', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-</script>
-<script src="https://recordssponge.com/d4e8fdc34e066ff48c36683c692dd432/invoke.js"></script>""", 70),
-    ("""<script>
-    atOptions = { 'key' : '10fcd40aed91182816ec3c5c46a7dd1f', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
-</script>
-<script src="https://recordssponge.com/10fcd40aed91182816ec3c5c46a7dd1f/invoke.js"></script>""", 110)
+    # Banner 468x60
+    ("""<script type="text/javascript">
+        atOptions = { 'key' : '6974aeff7dfe768c9bb6f1bc4f41b8c2', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/6974aeff7dfe768c9bb6f1bc4f41b8c2/invoke.js"></script>""", 70),
+    
+    # Rectangle 300x250
+    ("""<script type="text/javascript">
+        atOptions = { 'key' : '70e7780bfb94e2a38a943e4da2236203', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/70e7780bfb94e2a38a943e4da2236203/invoke.js"></script>""", 270),
+    
+    # Banner Vertical 160x300
+    ("""<script type="text/javascript">
+        atOptions = { 'key' : '065915b0fcd8a8e875f0750f253ab93f', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/065915b0fcd8a8e875f0750f253ab93f/invoke.js"></script>""", 320),
+    
+    # Skyscraper 160x600
+    ("""<script type="text/javascript">
+        atOptions = { 'key' : '94ee7415d71e74eed371c9428fb40dbf', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/94ee7415d71e74eed371c9428fb40dbf/invoke.js"></script>""", 620),
+    
+    # Mobile Banner 320x50
+    ("""<script type="text/javascript">
+        atOptions = { 'key' : 'd4e8fdc34e066ff48c36683c692dd432', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/d4e8fdc34e066ff48c36683c692dd432/invoke.js"></script>""", 60),
+    
+    # Leaderboard 728x90
+    ("""<script type="text/javascript">
+        atOptions = { 'key' : '10fcd40aed91182816ec3c5c46a7dd1f', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/10fcd40aed91182816ec3c5c46a7dd1f/invoke.js"></script>""", 100),
+
+    # Espacio Adicional 1 (468x60)
+    ("""<script type="text/javascript">
+        atOptions = { 'key' : '6974aeff7dfe768c9bb6f1bc4f41b8c2', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/6974aeff7dfe768c9bb6f1bc4f41b8c2/invoke.js"></script>""", 70),
+
+    # Espacio Adicional 2 (300x250)
+    ("""<script type="text/javascript">
+        atOptions = { 'key' : '70e7780bfb94e2a38a943e4da2236203', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/70e7780bfb94e2a38a943e4da2236203/invoke.js"></script>""", 270),
+
+    # Espacio Adicional 3 (728x90)
+    ("""<script type="text/javascript">
+        atOptions = { 'key' : '10fcd40aed91182816ec3c5c46a7dd1f', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/10fcd40aed91182816ec3c5c46a7dd1f/invoke.js"></script>""", 100),
+
+    # Espacio Adicional 4 (320x50)
+    ("""<script type="text/javascript">
+        atOptions = { 'key' : 'd4e8fdc34e066ff48c36683c692dd432', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/d4e8fdc34e066ff48c36683c692dd432/invoke.js"></script>""", 60)
 ]
 
 for ad_script, h_val in ad_units:
