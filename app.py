@@ -455,23 +455,39 @@ with col_r2:
 
 str_lit.markdown("<br>", unsafe_allow_html=True)
 
-# --- SECCIÓN DE PATROCINIOS Y PUBLICIDAD (1 SOLO BANNER CENTRALIZADO) ---
+# --- SECCIÓN DE PATROCINIOS Y PUBLICIDAD (10 UNIDADES LIMPIAS) ---
 str_lit.subheader("📢 Patrocinadores y Publicidad")
-str_lit.markdown("<p style='font-size: 0.9rem; color: #94A3B8;'>Espacio publicitario integrado para apoyar el mantenimiento de la plataforma.</p>", unsafe_allow_html=True)
 
-ad_code = """
-<script type="text/javascript">
-    atOptions = {
-        'key' : '70e7780bfb94e2a38a943e4da2236203',
-        'format' : 'iframe',
-        'height' : 250,
-        'width' : 300,
-        'params' : {}
-    };
+ad_units = [
+    ('<script type="text/javascript" src="https://recordssponge.com/a3dewxhcvr?key=1a2d9cb846d27dcb912e40e87f1cd613"></script>', 50),
+    ('<script src="https://recordssponge.com/0f/4e/e9/0f4ee99c511ee5d28bb6af0484d76ae5.js"></script>', 50),
+    ('<script async="async" data-cfasync="false" src="https://recordssponge.com/b8ce7bc9ad670ff706446376eacf6dd9/invoke.js"></script><div id="container-b8ce7bc9ad670ff706446376eacf6dd9"></div>', 100),
+    ('<script src="https://recordssponge.com/de/6e/d9/de6ed91fcd1cb73a5c2197fd70a1f9fa.js"></script>', 50),
+    ("""<script>
+    atOptions = { 'key' : '6974aeff7dfe768c9bb6f1bc4f41b8c2', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
 </script>
-<script type="text/javascript" src="https://www.highrevenueformat.com/70e7780bfb94e2a38a943e4da2236203/invoke.js"></script>
-"""
+<script src="https://recordssponge.com/6974aeff7dfe768c9bb6f1bc4f41b8c2/invoke.js"></script>""", 80),
+    ("""<script>
+    atOptions = { 'key' : '70e7780bfb94e2a38a943e4da2236203', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
+</script>
+<script src="https://recordssponge.com/70e7780bfb94e2a38a943e4da2236203/invoke.js"></script>""", 270),
+    ("""<script>
+    atOptions = { 'key' : '065915b0fcd8a8e875f0750f253ab93f', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
+</script>
+<script src="https://recordssponge.com/065915b0fcd8a8e875f0750f253ab93f/invoke.js"></script>""", 320),
+    ("""<script>
+    atOptions = { 'key' : '94ee7415d71e74eed371c9428fb40dbf', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };
+</script>
+<script src="https://recordssponge.com/94ee7415d71e74eed371c9428fb40dbf/invoke.js"></script>""", 620),
+    ("""<script>
+    atOptions = { 'key' : 'd4e8fdc34e066ff48c36683c692dd432', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+</script>
+<script src="https://recordssponge.com/d4e8fdc34e066ff48c36683c692dd432/invoke.js"></script>""", 70),
+    ("""<script>
+    atOptions = { 'key' : '10fcd40aed91182816ec3c5c46a7dd1f', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+</script>
+<script src="https://recordssponge.com/10fcd40aed91182816ec3c5c46a7dd1f/invoke.js"></script>""", 110)
+]
 
-str_lit.markdown("<div class='content-card' style='text-align: center;'>", unsafe_allow_html=True)
-components.html(ad_code, height=270, scrolling=False)
-str_lit.markdown("</div>", unsafe_allow_html=True)
+for ad_script, h_val in ad_units:
+    components.html(ad_script, height=h_val, scrolling=False)
