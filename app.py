@@ -1,5 +1,12 @@
 import streamlit as str_lit
 import streamlit.components.v1 as components
+
+# --- VERIFICACIÓN HILLTOPADS ---
+components.html(
+    '<meta name="aec5ac26b03fad5536e78f4b11eaa4ecdb6b2f5f"'
+    ' content="aec5ac26b03fad5536e78f4b11eaa4ecdb6b2f5f" />',
+    height=0,
+)
 import requests
 import base64
 from io import BytesIO
