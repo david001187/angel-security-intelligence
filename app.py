@@ -14,11 +14,21 @@ str_lit.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# --- VERIFICACIÓN DE GOOGLE SEARCH CONSOLE ---
-str_lit.markdown(
-    '<meta name="google-site-verification" content="Ta8ODswnTUSCB5uvTF2ENRpnuTbtEPGYCukPArAKFLE" />',
-    unsafe_allow_html=True
-)
+# --- CONFIGURACIÓN DE GOOGLE ANALYTICS ---
+GA_MEASUREMENT_ID = "G-17HRHZPGT8"
+
+google_analytics_script = f"""
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag.js?id={GA_MEASUREMENT_ID}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+
+      gtag('config', '{GA_MEASUREMENT_ID}');
+    </script>
+"""
+components.html(google_analytics_script, height=0, scrolling=False)
 
 # --- CONFIGURACIÓN DE MONETIZACIÓN GLOBAL Y TESORERÍA ---
 TREASURY_WALLET_ADDRESS = "6bnAU7x3uCFVGk4pTdqv68ibKXik5NTHsxNADtBUY4Qj"
