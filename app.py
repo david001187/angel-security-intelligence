@@ -14,6 +14,12 @@ str_lit.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# --- VERIFICACIÓN DE GOOGLE SEARCH CONSOLE ---
+str_lit.markdown(
+    '<meta name="google-site-verification" content="Ta8ODswnTUSCB5uvTF2ENRpnuTbtEPGYCukPArAKFLE" />',
+    unsafe_allow_html=True
+)
+
 # --- CONFIGURACIÓN DE MONETIZACIÓN GLOBAL Y TESORERÍA ---
 TREASURY_WALLET_ADDRESS = "6bnAU7x3uCFVGk4pTdqv68ibKXik5NTHsxNADtBUY4Qj"
 PAYPAL_ME_LINK = "https://paypal.me/angelciberseguridad"
